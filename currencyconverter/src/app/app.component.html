@@ -1,0 +1,13 @@
+<div class="app-container">
+    <div class="convert">
+        <app-input  
+        [currencies]="currencyData" [rates]="ratesData"
+        (selectedCurrency)="handleCurrencyChanged($event)">
+        </app-input>
+    </div>
+    <div class="display">
+        <app-history>
+            [selectedCurrency]="selectedCurrency" 
+        </app-history>
+    </div>
+</div>

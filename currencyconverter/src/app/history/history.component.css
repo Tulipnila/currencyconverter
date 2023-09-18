@@ -1,0 +1,11 @@
+.date-container{
+    display:flex;
+    gap:10px;
+}
+button{
+    background-color: white;
+    border:none;
+    outline:1px solid rgba(7, 7, 132, 0.636);
+    cursor: pointer;
+    height: 22px;
+}

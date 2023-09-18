@@ -1,0 +1,25 @@
+<div class="container"> <h2>Convert Currency</h2>   
+    Enter Amount: <input type="number" id="input" value="0" [(ngModel)]="inputAmount">
+<br><br>
+<div class="input-container" >
+    <div class="custom-select">
+        <div class="selected-option">From: </div>
+        <div class="ulDisplay" (click)="toggleDropdown('from')">{{ selectedFromCurrency }} <span> &#8964; </span>
+            <ul *ngIf="showFromDropdown" class="dropdown">
+                <li *ngFor="let currency of currencies | keyvalue" (click)="selectCurrency(currency.key, 'from' )">{{currency['key']}} - {{currency['value']}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="custom-select">
+        <div class="selected-option">To: </div>
+        <div class="ulDisplay" (click)="toggleDropdown('to')">{{selectedToCurrency}} <span> &#8964; </span>
+            <ul *ngIf="showToDropdown">
+                <li *ngFor="let currency of currencies | keyvalue" (click)="selectCurrency(currency.key, 'to')">{{currency['key']}} - {{currency['value']}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<button  (click)="convertCurrency()" type="submit">convert</button>
+<p *ngIf="convertedAmount">{{ inputAmount }} {{ selectedFromCurrency }} = {{ convertedAmount }} {{ selectedToCurrency }}</p>
+
+</div>
