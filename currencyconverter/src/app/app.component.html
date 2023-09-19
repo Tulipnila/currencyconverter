@@ -1,4 +1,5 @@
 <div class="app-container">
+    <div class="navi"></div>
     <div class="convert">
         <app-input  
         [currencies]="currencyData" [rates]="ratesData"
@@ -6,8 +7,6 @@
         </app-input>
     </div>
     <div class="display">
-        <app-history>
-            [selectedCurrency]="selectedCurrency" 
-        </app-history>
+        <app-history></app-history>
     </div>
 </div>

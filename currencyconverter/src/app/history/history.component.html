@@ -1,9 +1,8 @@
-
-<div class="date-container"> 
-  <input type="date" [(ngModel)]="date">
-  <button (click)="createChart()">Go!</button>
-</div>
 <div class="chart-container">
-  <h3>Chart</h3>
-  <canvas id="myChart"></canvas>
-</div> 
+  <div class="date-container">
+    <label for="selectedDate">Select Date:</label>
+    <input type="date" id="selectedDate" [(ngModel)]="selectedDate">
+    <button (click)="updateChart()"><span>➡️</span></button>
+  </div>
+  <canvas id="myChart" ></canvas>
+</div>

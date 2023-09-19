@@ -12,9 +12,9 @@ export class DataService {
     return this.http.get(`https://openexchangerates.org/api/currencies.json`);
   }
   getData(baseCurrency:string){
-    return this.http.get(`https://openexchangerates.org/api/latest.json?app_id=0f232d07cc7346d999cc68767e4a59bd&base=${baseCurrency}`);
+    return this.http.get(`https://openexchangerates.org/api/latest.json?app_id=ac3d5deac1cd46fd8cfd4273a845884d&base=${baseCurrency}`);
   }
   getHistory(date:string){
-    return this.http.get(`https://openexchangerates.org/api/historical/${date}.json?app_id=0f232d07cc7346d999cc68767e4a59bd`)
+    return this.http.get(`https://openexchangerates.org/api/historical/${date}.json?app_id=ac3d5deac1cd46fd8cfd4273a845884d`)
   }
 }

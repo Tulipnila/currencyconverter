@@ -1,86 +1,174 @@
 .container{
-    padding: 20px;
-    width: 600px;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+
+}
+br{
+    display: none;
+}
+#input{
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px ;
+
+}
+.ulDisplay{
+    width: 200px;
+    height: 30px;
+    border:1px solid green;
+    background-color: white;
+    line-height: 30px;
+    position: relative;
+}
+
+.input-container, .custom-select{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px;
-    background-color: white;
-    box-shadow: 2px 5px 15px rgba(0, 94, 255, 0.678);
-    border-radius: 20px;
+    text-align: left;
+    row-gap: 10px;
+}
 
-}
-#input{
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    text-indent: 10px;
-}
-.input-container{
-    width: 500px;
-    display: flex;
-    gap:10px;
-    align-items: center;
-}
-.selected-option{
-    font-size: 18px;
-}
-.custom-select{
-    display: flex;
-    gap:10px;
-    z-index: 5;
-}
-.ulDisplay{
-    width: 150px;
-    height: 25px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    border:1px solid black;
-    position: relative;
-    box-shadow: 5px 10px 10px rgba(42, 124, 165, 0.733);
-}
-.ulDisplay:hover{
-    cursor: text;
-}
 span{
     position: absolute;
     right: 5px;
-    bottom:5px;
 }
 ul{
+    background-color: white;
     list-style: none;
-    padding: 0;
-    width: 150px;
-    height: 100px;
-    border:2px solid rgb(8, 64, 8);
-    box-shadow: 2px 2px 2px rgba(80, 114, 80, 0.453);
-    border-radius: 5px;
+    height: 180px;
     overflow-y: scroll;
-    position: absolute;
-    top:23px;
-    background-color: rgb(247, 247, 247);
-    cursor: pointer;
+    border: 1px solid green;
 }
-li:hover{
-    background-color: rgba(19, 95, 54, 0.395);
+input:hover, .ulDisplay:hover{
+    cursor: text;
+    box-shadow: 2px 2px 5px 2px rgba(42, 124, 165, 0.733);
+    border: none;
+    border-radius: 5px;
 }
-button{
-    width: 80px;
-    height: 30px;
-    font-size: 15px;
-    background-color: aliceblue;
-    cursor: pointer;
+@media (min-width:686px){
+    .input-container{
+        display: flex;
+        flex-direction: row;
+    }
+    input:hover, .ulDisplay:hover{
+        cursor: text;
+        box-shadow: 2px 2px 5px 2px rgba(42, 124, 165, 0.733);
+        border: none;
+        border-radius: 5px;
+    }
+    button:active{
+        background-color: rgba(8, 64, 8, 0.471);
+        color:white;
+    }
+    .container{
+        row-gap: 20px;
+    }
+    button{
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 5px 10px 10px rgba(42, 124, 165, 0.733);
+        border:none;
+        outline: 1px solid green;
+        cursor: pointer;
+        font-size: 15px;
+    }
+}   
+@media (min-width:982px){
+    .container{
+        padding: 20px;
+        width: 600px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+        background-color: white;
+        box-shadow:0px 4px 12px 0px rgba(0, 94, 255, 0.678);
+        border-radius: 20px;
 
-}
-button:active{
-    background-color: rgba(8, 64, 8, 0.471);
-    color:white;
-}
-input,button{
-    border-radius: 20px;
-    box-shadow: 5px 10px 10px rgba(42, 124, 165, 0.733);
-    border:none;
-    outline: 1px solid green;
+    }
+    #input{
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+        text-indent: 10px;
+        border-radius: 5px;
+
+    }
+    .input-container{
+        width: 500px;
+        display: flex;
+        gap:10px;
+        align-items: center;
+    }
+    .selected-option{
+        font-size: 18px;
+    }
+    .custom-select{
+        display: flex;
+        gap:10px;
+        z-index: 5;
+    }
+    .ulDisplay{
+        width: 150px;
+        height: 25px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        border:1px solid black;
+        position: relative;
+    }
+    input:hover, .ulDisplay:hover{
+        cursor: text;
+        box-shadow: 2px 2px 5px 2px rgba(42, 124, 165, 0.733);
+        border: none;
+
+
+    }
+    span{
+        position: absolute;
+        right: 5px;
+        bottom:5px;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        width: 150px;
+        height: 100px;
+        border:2px solid rgb(8, 64, 8);
+        box-shadow: 2px 2px 2px rgba(80, 114, 80, 0.453);
+        border-radius: 5px;
+        overflow-y: scroll;
+        position: absolute;
+        top:23px;
+        background-color: rgb(247, 247, 247);
+        cursor: pointer;
+    }
+    li:hover{
+        background-color: rgba(19, 95, 54, 0.395);
+    }
+    button{
+        width: 80px;
+        height: 30px;
+        font-size: 15px;
+        background-color: aliceblue;
+        cursor: pointer;
+
+    }
+    button:active{
+        background-color: rgba(8, 64, 8, 0.471);
+        color:white;
+    }
+    button{
+        border-radius: 20px;
+        box-shadow: 5px 10px 10px rgba(42, 124, 165, 0.733);
+        border:none;
+        outline: 1px solid green;
+    }
 }
